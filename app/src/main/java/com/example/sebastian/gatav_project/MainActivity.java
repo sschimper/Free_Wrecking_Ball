@@ -84,5 +84,6 @@ public class MainActivity extends MainMenue {
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
+
 }
 

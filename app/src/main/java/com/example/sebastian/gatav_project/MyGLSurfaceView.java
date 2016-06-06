@@ -1,6 +1,7 @@
 package com.example.sebastian.gatav_project;
 
 import android.content.Context;
+import android.graphics.PixelFormat;
 import android.opengl.GLSurfaceView;
 import android.opengl.GLU;
 import android.widget.ImageView;
@@ -16,13 +17,6 @@ public class MyGLSurfaceView extends GLSurfaceView {
 
     private MyRenderer renderer;
     public Context context; //
-    public float[] transformationMatrix;
-    // current velocity (x,y,z)
-    public static float[] velocity;
-    // current y-rotation, positive is z to x direction; angle zero is z-axis
-    public float yRot;
-
-    ImageView view = (ImageView)findViewById(R.id.content);
 
 
     public MyGLSurfaceView(Context context) {
@@ -31,6 +25,7 @@ public class MyGLSurfaceView extends GLSurfaceView {
         setRenderer(renderer);
 
         setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
+
     }
 
     private class MyRenderer implements Renderer {
@@ -56,8 +51,9 @@ public class MyGLSurfaceView extends GLSurfaceView {
             // kommt noch
         }
 
-
     }
+
+
 
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
         gl.glDisable(GL10.GL_DITHER);
