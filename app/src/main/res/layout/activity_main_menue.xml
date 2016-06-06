@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:layout_alignParentBottom="true"
+    tools:context="com.example.sebastian.gatav_project.MainMenue"
+    android:clickable="false">
+
+    <AbsoluteLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/content"
+            android:layout_width="650dip"
+            android:layout_height="470dip"
+            android:layout_x="-30dip"
+            android:layout_y="-40dip"
+            android:background="@drawable/background" />
+    </AbsoluteLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Free Wrecking Ball"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:layout_centerHorizontal="true"
+        android:allowUndo="false"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="50sp"
+        android:textColor="#ff0000" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_game"
+        android:id="@+id/button"
+        android:layout_above="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:onClick="startGame"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quit"
+        android:id="@+id/button3"
+        android:layout_marginBottom="27dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="quitGame"/>
+
+</RelativeLayout>
